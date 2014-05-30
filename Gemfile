@@ -12,7 +12,7 @@ end
 
 # Use PostgreSQL for the production database
 group :production do
-  gem 'ps'
+  gem 'pg'
 end
 
 # Use SCSS for stylesheets
