@@ -1,0 +1,17 @@
+<header id="content-header">
+  <h1>Reviews for <%= link_to(@project.name, @project) %></h1>
+</header>
+
+<ol id="pledges">
+  <% @pledges.each do |pledge| %>
+    <li>
+      <span class="user"><%= link_to(pledge.name, pledge.email) %></span>
+      <span class="amount"><%= number_to_currency(pledge.pledge_amount) %></span>
+      <span class="date"><%= time_ago_in_words(pledge.created_at) %> ago</span>
+      <p>
+        &quot;<%= pledge.comment %>&quot;
+      </p>
+    </li>
+  <% end %>
+</ol>
+
